@@ -12,7 +12,9 @@ import { DialogCreateProjectComponent } from '../dialog-create-project/dialog-cr
 })
 
 export class ProjectListComponent implements OnInit {
-    displayedColumns: string[] = ['position', 'name', 'resource', 'startDate', 'endDate', 'duration', 'complete'];
+    displayedColumns: string[] = ['position', 'name', 'resource', 'startDate', 'endDate', 'duration', 'complete', 'star'];
+
+    //displayedColumns: string[] = ['position', 'name', 'resource', 'startDate', 'endDate', 'duration', 'complete'];
     dataSource = new MatTableDataSource<Project>(ELEMENT_DATA);
     name: string;
     resource: string;
