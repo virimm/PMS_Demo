@@ -17,7 +17,7 @@
 
   </mat-grid-list>
 
-  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 highlight">
+  <table mat-table [dataSource]="dataSource" matSort >
 
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
@@ -71,10 +71,10 @@
       </td>
     </ng-container>
   
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
     
-  <mat-paginator [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[15, 20]" showFirstLastButtons></mat-paginator>
 </div>
 

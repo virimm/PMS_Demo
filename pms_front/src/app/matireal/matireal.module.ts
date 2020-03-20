@@ -12,6 +12,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSortModule} from '@angular/material/sort';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 import { from } from 'rxjs';
 
@@ -38,7 +41,10 @@ const MaterialComponentsExports = [
   MatNativeDateModule,
   MatRippleModule,
   MatSortModule,
-  MatMenuModule
+  MatMenuModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatListModule
 ]
 
 @NgModule({

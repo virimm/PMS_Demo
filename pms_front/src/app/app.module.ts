@@ -9,9 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {ProjectListComponent} from './project/project.list.component';
 import { DialogCreateProjectComponent } from './dialog-create-project/dialog-create-project.component';
+import {SidenavMenu} from './sidenav/sidenav-menu';
 
 import { from } from 'rxjs';
-
 
 @NgModule({
     imports:      [ 
@@ -21,9 +21,19 @@ import { from } from 'rxjs';
         MatirealModule,
         ReactiveFormsModule
     ],
-    entryComponents: [DialogCreateProjectComponent],
-    declarations: [ ProjectListComponent, DialogCreateProjectComponent ],
-    bootstrap:    [ ProjectListComponent ]
+    entryComponents: [
+        SidenavMenu,
+        DialogCreateProjectComponent, 
+    ],
+    declarations: [ 
+        SidenavMenu,
+        ProjectListComponent, 
+        DialogCreateProjectComponent, 
+    ],
+    bootstrap: [
+        SidenavMenu,
+        ProjectListComponent,
+    ]
 })
 
 export class AppModule { }
