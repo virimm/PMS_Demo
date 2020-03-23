@@ -31,8 +31,7 @@ import { from } from 'rxjs';
         DialogCreateProjectComponent, 
     ],
     bootstrap: [
-        SidenavMenu,
-        ProjectListComponent,
+        SidenavMenu
     ]
 })
 
