@@ -11,6 +11,7 @@ import {ProjectListComponent} from './project/project.list.component';
 import { DialogCreateProjectComponent } from './dialog-create-project/dialog-create-project.component';
 import {SidenavMenu} from './sidenav/sidenav-menu';
 import {ProjectSwitch} from './project-switch/project-switch';
+import {ProjectInfoComponent} from './project/project-info.component';
 
 import { from } from 'rxjs';
 
@@ -30,7 +31,8 @@ import { from } from 'rxjs';
         SidenavMenu,
         ProjectListComponent, 
         DialogCreateProjectComponent, 
-        ProjectSwitch
+        ProjectSwitch,
+        ProjectInfoComponent
     ],
     bootstrap: [
         SidenavMenu
