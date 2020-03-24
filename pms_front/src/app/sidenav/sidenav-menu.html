@@ -20,7 +20,7 @@
       </mat-sidenav>
   
       <mat-sidenav-content>
-        <main-project-list *ngIf="showSection.showAllProject"></main-project-list>
+        <project-switch *ngIf="showSection.showAllProject"></project-switch>
         <div *ngIf="showSection.showMyTasks">
             <h1 class="main-app-name">My future Tasks</h1>
         </div>

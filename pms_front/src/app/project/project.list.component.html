@@ -1,5 +1,6 @@
-<div class="basic-container">
-  <mat-grid-list cols="4" rowHeight="100px" gutterSize="30px">
+<div class="basic-container" >
+
+  <mat-grid-list cols="4" rowHeight="100px" gutterSize="30px" >
 
     <mat-grid-tile colspan="3">
       <mat-form-field>
@@ -62,7 +63,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="openInfoProject(element)">
             <mat-icon>apps</mat-icon>
             <span>Open Project</span>
           </button>
@@ -76,5 +77,6 @@
   </table>
     
   <mat-paginator [pageSizeOptions]="[15, 20]" showFirstLastButtons></mat-paginator>
+
 </div>
 

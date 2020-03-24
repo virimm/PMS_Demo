@@ -1,9 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, Input} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogCreateProjectComponent } from '../dialog-create-project/dialog-create-project.component';
+import { ProjectSwitch } from '../project-switch/project-switch';
 
 @Component({
     selector: 'main-project-list',
@@ -15,6 +16,7 @@ export class ProjectListComponent implements OnInit {
     displayedColumns: string[] = ['position', 'name', 'resource', 'startDate', 'endDate', 'duration', 'complete', 'menu'];
 
     dataSource = new MatTableDataSource<Project>(ELEMENT_DATA);
+
     name: string;
     resource: string;
     newProject: Project;
@@ -22,6 +24,8 @@ export class ProjectListComponent implements OnInit {
 
     @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
     @ViewChild(MatSort, {static: true}) sort: MatSort;
+
+    @Input() projectSwitch: ProjectSwitch;
 
     constructor(public dialog: MatDialog) {}
 
@@ -66,6 +70,11 @@ export class ProjectListComponent implements OnInit {
     calculatePosition(arr) {
         const lastPos = arr[arr.length - 1].position;
         return lastPos + 1;
+    }
+
+    openInfoProject(element) {
+        this.projectSwitch.selectProject = element;
+        this.projectSwitch.isShowInfoProject = true;
     }
 }
 

@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import { ProjectSwitch } from '../project-switch/project-switch';
 
 @Component({
   selector: 'sidenav-menu',
@@ -11,16 +12,25 @@ export class SidenavMenu {
         showMyTasks: false
     };
 
-    constructor() {}
+    @ViewChild(ProjectSwitch, {static: false})
+    private projectSwitch: ProjectSwitch;
 
     openSection(snav, key) {
         snav.close();
+
         for (let prop in this.showSection) {
-            if(prop === key) {
-                this.showSection[prop] = true;
-            } else {
-                this.showSection[prop] = false;
-            }
+            this.showSection[prop] = false;
+        }
+        if(this.showSection.hasOwnProperty(key)) {
+            this.showSection[key] = true;
+        }
+        
+        this.hideSectionInfoProject();
+    }
+
+    hideSectionInfoProject() {
+        if(this.projectSwitch) {
+            this.projectSwitch.isShowInfoProject = false;
         }
     }
 
