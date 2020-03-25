@@ -1,4 +1,5 @@
 <div class="basic-container" *ngIf="isShowInfoProject">
-    Здесь запускается компонент диаграммы и передается модель "selectProject" в компонент
+    <project-info [projectSwitch] = "this" *ngIf="isShowInfoProject"></project-info>
+    <!-- Здесь запускается компонент диаграммы и передается модель "selectProject" в компонент -->
 </div>
 <main-project-list [projectSwitch] = "this" *ngIf="!isShowInfoProject"></main-project-list>
