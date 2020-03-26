@@ -15,6 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { from } from 'rxjs';
 
@@ -44,7 +45,8 @@ const MaterialComponentsExports = [
   MatMenuModule,
   MatToolbarModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatCheckboxModule
 ]
 
 @NgModule({

@@ -132,7 +132,6 @@ div.gantt {
   
   /* needed for IE8 */
   
-  .gstartdate div,
   .gplanstartdate,
   .gplanenddate,
   .gstartdate,
@@ -567,7 +566,7 @@ div.gantt {
     /* padding-left: 532px; LC width */
     line-height: 1;
     /* Overrides inherited CSS (e.g. from Bootstrap) */
-    display: flex;
+    /* display: flex; */
   }
   
   .gcontainercol {
@@ -756,7 +755,8 @@ div.gantt {
   
   .gantt-inputtable {
     max-width: 100%;
-    max-height: 16px;
+    /* max-height: 16px; */
+    max-height: 10px;
   }
   
   .gadditional {

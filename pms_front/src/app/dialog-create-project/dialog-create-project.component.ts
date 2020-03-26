@@ -56,11 +56,23 @@ export class DialogCreateProjectComponent implements OnInit {
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
   }
 
+  parseDate(date) {
+    var mm = date.getMonth() + 1;
+    var dd = date.getDate();
+  
+    return [date.getFullYear(),
+            (mm>9 ? '' : '0') + mm,
+            (dd>9 ? '' : '0') + dd
+           ].join('-');
+  }
+
   createNewProject() {
-    if(this.data.name && this.data.resource && this.inputEnd.value && this.inputStart.value) {
-      this.data.startDate = this.inputStart.value.toLocaleString();
-      this.data.endDate = this.inputEnd.value.toLocaleString();
+    if(this.data.pName && this.data.pRes && this.inputEnd.value && this.inputStart.value) {
+      this.data.pStart = this.parseDate(this.inputStart.value);
+      this.data.pEnd = this.parseDate(this.inputEnd.value);
       this.data.duration = this.substractDate(this.inputEnd.value, this.inputStart.value);
+      this.data.pClass = "ggroupblack",
+      this.data.pGroup = 1,
       this.isClickBtnCreateProject = true;
       this.dialogRef.close(this.isClickBtnCreateProject);
     }

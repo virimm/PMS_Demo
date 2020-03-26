@@ -4,8 +4,8 @@
     <mat-grid-tile >
         <mat-form-field class="btn-create-project">
             <mat-label>Name project</mat-label>
-            <input matInput type="text" [(ngModel)]="data.name" required>
-            <button mat-button *ngIf="data.name" matSuffix mat-icon-button aria-label="Clear" (click)="data.name =''">
+            <input matInput type="text" [(ngModel)]="data.pName" required>
+            <button mat-button *ngIf="data.pName" matSuffix mat-icon-button aria-label="Clear" (click)="data.pName =''">
                 <mat-icon>close</mat-icon>
             </button>
         </mat-form-field>
@@ -14,7 +14,7 @@
     <mat-grid-tile>
         <mat-form-field class="btn-create-project">
             <mat-label>Resource</mat-label>
-            <mat-select [formControl]="selectFormControl" required [(value)] = "data.resource">
+            <mat-select [formControl]="selectFormControl" required [(value)] = "data.pRes">
             <mat-option>--</mat-option>
               <mat-option *ngFor="let resource of resources" [value]="resource">
                 {{resource}}
