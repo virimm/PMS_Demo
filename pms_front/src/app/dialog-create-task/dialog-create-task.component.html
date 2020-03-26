@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Новый проект</h1>
+<h1 mat-dialog-title>Новая задача</h1>
 <mat-grid-list cols="2" rowHeight="100px" gutterSize="30px">
 
     <mat-grid-tile >
@@ -41,15 +41,32 @@
             <mat-datepicker touchUi #pickerEnd></mat-datepicker>
           </mat-form-field>
     </mat-grid-tile>
+
+    <mat-grid-tile >
+        <mat-form-field class="btn-create-project">
+            <mat-label>Стоимость</mat-label>
+            <input matInput type="number" [(ngModel)]="data.pCost" required>
+            <button mat-button *ngIf="data.pCost" matSuffix mat-icon-button aria-label="Clear" (click)="data.pCost =''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </mat-grid-tile>
   
+    <mat-grid-tile >
+        <mat-form-field class="example-full-width">
+            <mat-label>Описание</mat-label>
+            <textarea matInput [(ngModel)]="data.pNotes"></textarea>
+          </mat-form-field>
+    </mat-grid-tile>
+
 </mat-grid-list>
 
 <mat-grid-list cols="2" rowHeight="50px" gutterSize="30px">
     <mat-grid-tile>
-        <button class="btn-create-project" mat-raised-button color="primary" (click)="createNewProject()">Добавить</button>
+        <button class="btn-create-task" mat-raised-button color="primary" (click)="createNewTask()">Добавить</button>
     </mat-grid-tile>
 
     <mat-grid-tile>
-        <button class="btn-create-project" mat-stroked-button (click)="closeDialog()">Отмена</button>
+        <button class="btn-create-task" mat-raised-button color="warn" (click)="closeDialog()">Отмена</button>
     </mat-grid-tile>
 </mat-grid-list>

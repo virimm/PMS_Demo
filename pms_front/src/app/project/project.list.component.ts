@@ -105,7 +105,7 @@ export class ProjectListComponent implements OnInit {
     generateRandomnProject() {
         ELEMENT_DATA = Array.from(
             {length: 100}, 
-            (_, k) => this.createNewRandomnProject(k + 1,"Projet", "ggroupblack", 1, 0, "")
+            (_, k) => this.createNewRandomnProject(k + 1,"Project", "ggroupblack", 1, 0, "")
         );
     }
 

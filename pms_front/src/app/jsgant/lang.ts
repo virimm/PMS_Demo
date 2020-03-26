@@ -328,7 +328,7 @@ const es = {
     'planstartdate': 'Plan Нач. дата',
     'enddate': 'Кон. дата',
     'planenddate': 'Plan Кон. дата',
-    'cost': 'Cost',
+    'cost': 'Стоимость',
     'moreinfo': 'Детали',
     'notes': 'Заметки',
     'format': 'Формат',
