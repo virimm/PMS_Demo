@@ -1,7 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { JSGantt } from '../jsgant/jsgantt';
 import { ProjectSwitch } from '../project-switch/project-switch';
- 
+import { DialogCreateTaskComponent } from '../dialog-create-task/dialog-create-task.component';
+import { Project } from './project.list.component';
+import {MatDialog} from '@angular/material/dialog';
+
+
 @Component({
     selector: 'project-info',
     templateUrl: 'project-info.component.html',
@@ -31,7 +35,9 @@ export class ProjectInfoComponent implements OnInit {
     vFormatArr: any = ['Day', 'Week', 'Month', 'Quarter'];
     vResources: any = [];
 
-    constructor() {}
+    newTask: Project;
+
+    constructor(public dialog: MatDialog) {}
 
     ngOnInit() {
         const project = this.projectSwitch.selectProject;
@@ -110,6 +116,27 @@ export class ProjectInfoComponent implements OnInit {
     clickEdit() {
       this.vEditable = !this.isEdit;
       this.setOptionsGant();
+      this.drawGant();
+    }
+
+    openDialog() {
+      this.newTask = new Project();
+      this.newTask.pParent = this.projectSwitch.selectProject.pID;
+      const dialogRef = this.dialog.open(DialogCreateTaskComponent, {
+          width: '800px',
+          data: this.newTask
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+          if(result) {
+              this.addNewTask();
+              console.log('The dialog was closed and created new task');
+          }
+        });
+    }
+
+    addNewTask() {
+      this.addProjectOrTask(this.newTask);
       this.drawGant();
     }
 
