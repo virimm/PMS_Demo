@@ -29,10 +29,6 @@ export class PieChartsComponent implements OnInit, AfterViewInit {
 	ngOnInit() {}
 
     ngAfterViewInit() {
-        let canvas = document.querySelector('.canvasjs-chart-container');
-        if(this.chart) {
-            return;
-        }
         this.getWindowHieght();
         this.initChart(this.projectSwitch.selectProject.pName, this.type);
         this.renederChat();
