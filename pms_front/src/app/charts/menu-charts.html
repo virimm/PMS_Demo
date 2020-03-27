@@ -1,0 +1,12 @@
+<mat-tab-group>
+    <mat-tab label="First">
+        <ng-template matTabContent>
+            <pie-charts [projectSwitch] = "projectSwitch"></pie-charts>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Second">
+        <ng-template matTabContent>
+            <column-charts [projectSwitch] = "projectSwitch"></column-charts>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>

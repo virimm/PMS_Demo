@@ -21,9 +21,7 @@
   
       <mat-sidenav-content>
         <project-switch *ngIf="showSection.showAllProject"></project-switch>
-        <div *ngIf="showSection.showMyTasks">
-            <h1 class="main-app-name">My future Tasks</h1>
-        </div>
+        <kanban *ngIf="showSection.showMyTasks"></kanban>
       </mat-sidenav-content>
     </mat-sidenav-container>
 

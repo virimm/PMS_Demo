@@ -25,12 +25,14 @@ export class SidenavMenu {
             this.showSection[key] = true;
         }
         
-        this.hideSectionInfoProject();
+        this.openMainListProject();
     }
 
-    hideSectionInfoProject() {
+    openMainListProject() {
         if(this.projectSwitch) {
             this.projectSwitch.isShowInfoProject = false;
+            this.projectSwitch.isShowCharts = false;
+            this.projectSwitch.isShowMainProjectList = true;
         }
     }
 

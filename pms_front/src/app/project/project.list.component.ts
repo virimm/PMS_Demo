@@ -83,7 +83,16 @@ export class ProjectListComponent implements OnInit {
         element.tasks = this.generateRandomnTask(element);
 
         this.projectSwitch.selectProject = element;
+        this.projectSwitch.isShowMainProjectList = false;
         this.projectSwitch.isShowInfoProject = true;
+    }
+
+    openCharts(element) {
+        element.tasks = this.generateRandomnTask(element);
+
+        this.projectSwitch.selectProject = element;
+        this.projectSwitch.isShowMainProjectList = false;
+        this.projectSwitch.isShowCharts = true;
     }
 
     generateRandomnTask(element) {

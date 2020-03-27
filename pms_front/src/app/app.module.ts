@@ -14,6 +14,11 @@ import {ProjectSwitch} from './project-switch/project-switch';
 import {ProjectInfoComponent} from './project/project-info.component';
 import { DialogCreateTaskComponent } from './dialog-create-task/dialog-create-task.component';
 
+import {KanbanComponent} from './kanban/kanban';
+import {PieChartsComponent} from './charts/pie/pie-charts';
+import {ColumnChartsComponent} from './charts/column/column-charts';
+import {MenuCharts} from './charts/menu-charts';
+
 import { from } from 'rxjs';
 
 @NgModule({
@@ -34,7 +39,11 @@ import { from } from 'rxjs';
         DialogCreateProjectComponent, 
         ProjectSwitch,
         ProjectInfoComponent,
-        DialogCreateTaskComponent
+        DialogCreateTaskComponent,
+        KanbanComponent,
+        PieChartsComponent,
+        ColumnChartsComponent,
+        MenuCharts
     ],
     bootstrap: [
         SidenavMenu

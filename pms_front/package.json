@@ -17,9 +17,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
-    "bootstrap": "^4.4.1",
-    "jsgantt-improved": "^2.5.5",
-    "ng-gantt": "^2.5.5",
+    "@angular/upgrade": "~9.0.0",
     "rxjs": "~6.5.4",
     "zone.js": "~0.10.2"
   },

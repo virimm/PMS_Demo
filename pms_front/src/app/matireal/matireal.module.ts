@@ -16,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { from } from 'rxjs';
 
@@ -46,7 +48,9 @@ const MaterialComponentsExports = [
   MatToolbarModule,
   MatSidenavModule,
   MatListModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  DragDropModule,
+  MatTabsModule
 ]
 
 @NgModule({
