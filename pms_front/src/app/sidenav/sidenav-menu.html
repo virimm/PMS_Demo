@@ -20,6 +20,7 @@
       </mat-sidenav>
   
       <mat-sidenav-content>
+        <main-page *ngIf="showSection.showMainPage"></main-page>
         <project-switch *ngIf="showSection.showAllProject"></project-switch>
         <kanban *ngIf="showSection.showMyTasks"></kanban>
       </mat-sidenav-content>

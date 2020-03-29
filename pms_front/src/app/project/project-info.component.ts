@@ -32,7 +32,7 @@ export class ProjectInfoComponent implements OnInit {
     vAdditionalHeaders: any;
     vUseSingleCell: number = 10000;
     vShowCost: number = 1;
-    vFormatArr: any = ['Day', 'Week', 'Month', 'Quarter'];
+    vFormatArr: any = ['Week', 'Month', 'Quarter'];
     vResources: any = [];
 
     newTask: Project;
@@ -44,7 +44,7 @@ export class ProjectInfoComponent implements OnInit {
         const tasks = this.projectSwitch.selectProject.tasks;
         project.pCost = this.calcSum(tasks);
 
-        this.jsGant = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'day');
+        this.jsGant = new JSGantt.GanttChart(document.getElementById('GanttChartDIV'), 'week');
 
         this.setOptionsGant();
         this.addProjectOrTask(project);

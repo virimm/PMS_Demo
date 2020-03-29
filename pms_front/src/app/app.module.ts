@@ -18,6 +18,7 @@ import {KanbanComponent} from './kanban/kanban';
 import {PieChartsComponent} from './charts/pie/pie-charts';
 import {ColumnChartsComponent} from './charts/column/column-charts';
 import {MenuCharts} from './charts/menu-charts';
+import {MainPageComponent} from './main-page/main-page';
 
 import { from } from 'rxjs';
 
@@ -43,7 +44,8 @@ import { from } from 'rxjs';
         KanbanComponent,
         PieChartsComponent,
         ColumnChartsComponent,
-        MenuCharts
+        MenuCharts,
+        MainPageComponent
     ],
     bootstrap: [
         SidenavMenu

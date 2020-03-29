@@ -8,7 +8,8 @@ import { ProjectSwitch } from '../project-switch/project-switch';
 })
 export class SidenavMenu {
     showSection = {
-        showAllProject: true,
+        showMainPage: true,
+        showAllProject: false,
         showMyTasks: false
     };
 
