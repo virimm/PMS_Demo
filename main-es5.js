@@ -25220,7 +25220,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["main-page"]],
       decls: 11,
       vars: 0,
-      consts: [["id", "intro"], ["data-aos", "fade-up", 1, "intro-text"], [1, "product-screens"], ["data-aos", "fade-up", "data-aos-delay", "400", 1, "product-screen-1"], ["src", "assets/img/product-screen-1.png", "alt", ""], ["data-aos", "fade-up", "data-aos-delay", "200", 1, "product-screen-2"], ["src", "assets/img/product-screen-2.png", "alt", ""], ["data-aos", "fade-up", 1, "product-screen-3"], ["src", "assets/img/product-screen-3.png", "alt", ""]],
+      consts: [["id", "intro"], ["data-aos", "fade-up", 1, "intro-text"], [1, "product-screens"], ["data-aos", "fade-up", "data-aos-delay", "400", 1, "product-screen-1"], ["src", "../PMS_Demo/assets/img/product-screen-1.png", "alt", ""], ["data-aos", "fade-up", "data-aos-delay", "200", 1, "product-screen-2"], ["src", "../PMS_Demo/assets/img/product-screen-2.png", "alt", ""], ["data-aos", "fade-up", 1, "product-screen-3"], ["src", "../PMS_Demo/assets/img/product-screen-3.png", "alt", ""]],
       template: function MainPageComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0);
